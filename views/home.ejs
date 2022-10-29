@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        #foot{
+            margin-top: 105px;
+        }
+        #t{
+            height: flex;
+            border-radius: 2px;
+            border-style: double;
+        }
+        tr:hover {background-color: lightslategray;}
+        body{
+            background-image: url(https://media.istockphoto.com/photos/white-wooden-board-background-picture-id182061790?b=1&k=20&m=182061790&s=170667a&w=0&h=LqnlDBN32wTYaqh6jNq29hhOwn2HokJiZ6Ect2E-S5A=);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-primary navbar-fixed-top" >
+        <a class="navbar-brand" href="#">
+            <h1>USER MANAGEMENT</h1>
+        </a>
+        <form action = '\loginpage' method="GET">
+            <button class = 'nav-item btn btn-dark'>LOGOUT</button>
+        </form>
+      </nav>
+    <div>
+        <img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/User_icon_1.svg/2048px-User_icon_1.svg.png' height="130px" width = '130px' style="margin-left: 700px;">
+    </div>
+    <center><h1>Details of Users</h1></center>
+    <table border="5px" align="center" id = 't'>
+        <tr><th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>phoneNo</th>
+    </tr>
+    <% for(var i = 0;i < userData.length;i++){ %>
+        <tr><td><%= userData[i].name %></td>
+        <td><%= userData[i].email %></td>
+        <td><%= userData[i].age %></td>
+        <td><%= userData[i].phno %></td></tr>
+    <% } %>
+    </table>
+    <br><br><br>
+    <center>
+    <form action = '\getMovie' method="GET">
+        <button class = 'nav-item btn btn-dark' id = 'mo'>MOVIES</button>
+    </form>
+</center>
+    <footer class="bg-dark text-center text-lg-start" id = 'foot'>
+        <div class="text-center p-3" style="background-color: gray;">
+          © 2022 Copyright:
+          <a class="text-dark" href="https://mdbootstrap.com/">vishnu_society</a>
+        </div>
+      </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
